@@ -1,0 +1,29 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.8
+    steps:
+      - checkout
+      - restore_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "Pipfile" }}
+      - run:
+          command: |
+            pyenv virtualenv 3.8.0 python-ci
+            source ~/.bashrc
+            pyenv activate python-ci
+            pipenv install
+      - save_cache:
+          key: deps1-{{ .Branch }}-{{ checksum "Pipfile" }}
+          paths:
+            - "venv"
+      - run:
+          name: Running tests
+          command: |
+            source ~/.bashrc
+            pyenv activate python-ci
+            pip install pytest
+            pytest tests
+      - store_artifacts:
+          path: test-reports/
+          destination: python_app
