@@ -3,11 +3,14 @@ jobs:
   build:
     docker:
       - image: circleci/python:3.8
-      - image: peter1209/pyenv-uwsgi
     steps:
       - checkout
       - restore_cache:
           key: deps1-{{ .Branch }}-{{ checksum "Pipfile" }}
+      - run:
+          command: |
+            sudo pip install pipenv
+            pipenv install
       - run:
           command: |
             pyenv virtualenv 3.8.0 python-ci
