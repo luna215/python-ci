@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/python:3.8
+      - image: circleci/pyenv:1.2.18
     steps:
       - checkout
       - restore_cache:
