@@ -18,13 +18,6 @@ jobs:
           key: deps1-{{ .Branch }}-{{ checksum "Pipfile" }}
           paths:
             - "venv"
-      - run:
-          name: Running tests
-          command: |
-            source ~/.bashrc
-            pyenv activate python-ci
-            pip install pytest
-            pytest tests
       - store_artifacts:
           path: test-reports/
           destination: python_app
