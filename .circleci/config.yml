@@ -13,7 +13,7 @@ jobs:
             pipenv install
       - run:
           command: |
-            pipenv shell
+            pipenv run
             pytest tests
       - save_cache:
           key: deps1-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
