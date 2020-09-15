@@ -9,6 +9,7 @@ jobs:
           key: deps1-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
       - run:
           command: |
+            ls -lthr
             sudo pip install pipenv
             pipenv install
             sudo pip install pytest
