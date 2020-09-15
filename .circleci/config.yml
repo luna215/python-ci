@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: deps1-{{ .Branch }}-{{ checksum "Pipfile" }}
+          key: deps1-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
       - run:
           command: |
             sudo pip install pipenv
@@ -15,7 +15,7 @@ jobs:
           command: |
             pytest tests
       - save_cache:
-          key: deps1-{{ .Branch }}-{{ checksum "Pipfile" }}
+          key: deps1-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
           paths:
             - "venv"
       - store_artifacts:
