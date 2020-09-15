@@ -11,9 +11,9 @@ jobs:
           command: |
             sudo pip install pipenv
             pipenv install
+            sudo pip install pytest
       - run:
           command: |
-            pip list
             pytest tests
       - save_cache:
           key: deps1-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
