@@ -7,13 +7,12 @@ jobs:
       - checkout
       - run:
           command: |
-            ls -lthr
-            pwd
             sudo pip install pipenv
             pipenv install
       - run:
           command: |
-            pipenv run "pytest tests"
+            source $(pipenv --venv)/bin/activate
+            pytest tests
       - save_cache:
           key: deps1-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
           paths:
