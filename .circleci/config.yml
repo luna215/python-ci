@@ -11,6 +11,7 @@ jobs:
             pwd
             sudo pip install pipenv
             pipenv install
+            pipenv shell
       - run:
           command: |
             pytest tests
