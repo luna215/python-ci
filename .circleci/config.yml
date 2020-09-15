@@ -8,10 +8,10 @@ jobs:
       - run:
           command: |
             sudo pip install pipenv
-            pipenv install
       - run:
           command: |
             source $(pipenv --venv)/bin/activate
+            pipenv install
             pipenv run pytest
       - save_cache:
           key: deps1-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
