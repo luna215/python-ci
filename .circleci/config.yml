@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.8
+      - image: circleci/python:3.8.0
     steps:
       - checkout
       - restore_cache:
@@ -10,8 +10,8 @@ jobs:
       - run:
           command: |
             sudo pip install pipenv
-            sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
-            curl https://pyenv.run | bash
+            brew install readline xz
+            brew install pyenv pyenv-virtualenv
             pipenv install
       - run:
           command: |
