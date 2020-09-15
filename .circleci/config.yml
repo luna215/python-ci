@@ -10,7 +10,7 @@ jobs:
       - run:
           command: |
             sudo pip install pipenv
-            sudo pip install pytest
+            pipenv install
       - run:
           command: |
             pytest tests
