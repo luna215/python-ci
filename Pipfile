@@ -3,16 +3,6 @@ name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
 
-[dev-packages]
-vcrpy = "~=4.0"
-pytest = "~=5.4"
-pylint = "~=2.5"
-pymongo = "~=3.10"
-mypy = "~=0.770"
-autopep8 = "~=1.5"
-pytest-mock = "~=3.2"
-requests-mock = "~=1.8"
-
 [packages]
 colorz = "~=1.0"
 forex-python = "~=1.5"
@@ -25,6 +15,17 @@ babel = "~=2.8"
 pillow = "~=7.1"
 timeago = "~=1.0.14"
 pandas = "*"
+pytest = "~=5.4"
+
+[dev-packages]
+vcrpy = "~=4.0"
+pytest = "~=5.4"
+pylint = "~=2.5"
+pymongo = "~=3.10"
+mypy = "~=0.770"
+autopep8 = "~=1.5"
+pytest-mock = "~=3.2"
+requests-mock = "~=1.8"
 
 [requires]
 python_version = "3.8"
