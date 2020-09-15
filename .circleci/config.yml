@@ -5,14 +5,12 @@ jobs:
       - image: circleci/python:3.8.0
     steps:
       - checkout
-      - restore_cache:
-          key: deps1-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
       - run:
           command: |
             ls -lthr
             pwd
             sudo pip install pipenv
-            pipenv install Pipfile
+            pipenv install
       - run:
           command: |
             pytest tests
