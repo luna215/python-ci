@@ -11,8 +11,7 @@ jobs:
             pipenv install
       - run:
           command: |
-            source $(pipenv --venv)/bin/activate
-            pytest tests
+            pipenv --venv
       - save_cache:
           key: deps1-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
           paths:
