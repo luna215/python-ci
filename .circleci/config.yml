@@ -12,8 +12,6 @@ jobs:
           command: |
             pipenv install
             pipenv install --dev
-            source $(pipenv --venv)/bin/activate
       - run:
           command: |
             pipenv run pytest
-            pip list
