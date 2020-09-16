@@ -21,6 +21,3 @@ jobs:
           key: deps1-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
           paths:
             - "venv"
-      - store_artifacts:
-          path: test-reports/
-          destination: python_app
