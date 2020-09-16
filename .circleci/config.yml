@@ -17,7 +17,3 @@ jobs:
           command: |
             pipenv run pytest
             pip list
-      - save_cache:
-          key: deps1-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
-          paths:
-            - "venv"
