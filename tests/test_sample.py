@@ -6,3 +6,6 @@ def simple_fixture():
 
 def test_sample_function(simple_fixture):
     assert True
+
+class Paul:
+    pass
