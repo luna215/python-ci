@@ -1,6 +1,6 @@
 name: Lint
 
-on: push
+on: [push, pull_request]
 
 jobs:
   run-linters:
@@ -23,6 +23,8 @@ jobs:
         uses: wearerequired/lint-action@v1
         with:
           github_token: ${{ secrets.github_token }}
+          auto_fix: ${{ github.event_name == 'pull_request' }}
+
           # Enable linters
           black: true
           flake8: true
