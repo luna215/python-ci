@@ -9,3 +9,13 @@ def test_sample_function(simple_fixture):
 
 class Paul:
     pass
+class Karen:
+    pass
+class Paco:
+    pass
+class Jennifer:
+    pass
+class Mom:
+    pass
+
+
