@@ -4,7 +4,6 @@ on: [push]
 
 jobs:
   run-linters:
-    if: github.ref = 'refs/head/develop'
     name: Run linters
     runs-on: ubuntu-latest
 
@@ -24,7 +23,7 @@ jobs:
         uses: wearerequired/lint-action@v1
         with:
           github_token: ${{ secrets.github_token }}
-          auto_fix: ${{ github.event_name == 'push' }}
+          auto_fix: ${{ github.ref == 'refs/head/develop' }}
 
           # Enable linters
           black: true
