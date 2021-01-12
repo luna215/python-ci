@@ -1,13 +1,11 @@
 import pytest
 @pytest.fixture
 def simple_fixture():
-    print('hi')     
+    print("hi")
 def test_sample_function(simple_fixture):
-    assert True     
-
-
-
-
-
-
-    
+    assert True
+class Paul:
+    pass
+  
+  
+  
