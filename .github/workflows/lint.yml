@@ -23,8 +23,7 @@ jobs:
         uses: wearerequired/lint-action@v1
         with:
           # Enable linters
+          github_token: ${{ secrets.github_token }}
+          auto_fix: ${{ github.ref == 'refs/remotes/origin/develop' }}
           black: true
           flake8: true
-          
-          github_token: ${{ secrets.github_token }}
-          auto_fix: ${{ github.ref == 'refs/head/develop' }}
