@@ -1,9 +1,10 @@
 name: Lint
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   run-linters:
+    if: github.ref = 'refs/head/develop'
     name: Run linters
     runs-on: ubuntu-latest
 
