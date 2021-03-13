@@ -16,6 +16,7 @@ pillow = "~=7.1"
 timeago = "~=1.0.14"
 pandas = "*"
 gunicorn = "*"
+rq = "*"
 
 [dev-packages]
 vcrpy = "~=4.0"
