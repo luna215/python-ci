@@ -1,7 +1,7 @@
 import pytest
 
 
-@pytest.fixture                 
+@pytest.fixture
 def simple_fixture():
     print("hi")
 
@@ -14,5 +14,9 @@ class Paul:
 
 
 
+def test_sample_function(simple_fixture):
+    assert True
 
 
+class Paul:
+    pass
