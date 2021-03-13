@@ -1,2 +1,2 @@
 # python-ci
-Simple playground to tests python project and circle ci ideas
+Simple playground to test python project and circle ci ideas
