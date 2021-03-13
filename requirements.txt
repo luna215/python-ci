@@ -18,6 +18,7 @@ cfgv==3.2.0
 cfn-lint==0.47.1
 chardet==4.0.0
 cloudinary==1.24.0
+colorz==1.0.3
 cryptography==3.4.6
 decorator==4.4.2
 distlib==0.3.1
@@ -27,6 +28,7 @@ execnet==1.8.0
 filelock==3.0.12
 forex-python==1.5
 future==0.18.2
+gunicorn==20.0.4
 identify==2.1.1
 idna==2.10
 iniconfig==1.1.1
@@ -58,11 +60,12 @@ networkx==2.5
 nodeenv==1.5.0
 numpy==1.20.1
 packaging==20.9
+pandas==1.2.3
 parso==0.8.1
 pexpect==4.8.0
 pick==1.0.0
 pickleshare==0.7.5
-Pillow==8.1.2
+Pillow==7.2.0
 pipenv==2020.11.15
 pluggy==0.13.1
 port-for==0.4
@@ -88,6 +91,7 @@ pytest-postgresql==2.6.1
 pytest-xdist==2.2.1
 python-dateutil==2.8.1
 python-jose==3.2.0
+python-pptx==0.6.18
 pytz==2021.1
 PyYAML==5.4.1
 requests==2.25.1
@@ -99,6 +103,7 @@ scipy==1.6.1
 simplejson==3.17.2
 six==1.15.0
 sshpubkeys==3.3.1
+timeago==1.0.15
 toml==0.10.2
 traitlets==5.0.5
 typed-ast==1.4.2

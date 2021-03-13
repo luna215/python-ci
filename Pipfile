@@ -15,6 +15,7 @@ babel = "~=2.8"
 pillow = "~=7.1"
 timeago = "~=1.0.14"
 pandas = "*"
+gunicorn = "*"
 
 [dev-packages]
 vcrpy = "~=4.0"
