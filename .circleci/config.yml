@@ -23,4 +23,4 @@ jobs:
             export HEROKU_API_KEY=$HEROKU_API_KEY
       - run:
           command: |
-            heroku ps
+            heroku run -a ci-python pipenv install --dev; pipenv run pytest tests
