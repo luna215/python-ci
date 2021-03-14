@@ -17,8 +17,7 @@ jobs:
             pipenv run pytest tests
       - run:
           command: |
-            sudo apt install snap
-            sudo snap install --classic heroku
+            curl https://cli-assets.heroku.com/install.sh | sh
       - run:
           command: |
             export HEROKU_API_KEY=$HEROKU_API_KEY
