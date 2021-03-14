@@ -23,4 +23,4 @@ jobs:
             export HEROKU_API_KEY=$HEROKU_API_KEY
       - run:
           command: |
-            heroku -a ci-python run test_batch_worker
+            heroku ps
