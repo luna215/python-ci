@@ -1,8 +1,9 @@
+import os
 import logging.config
 import traceback
 import time
 
-logging.config.fileConfig('/Users/paulluna/development/python-ci/logging.ini', disable_existing_loggers=False)
+logging.config.fileConfig(os.path.abspath('logging.ini'), disable_existing_loggers=False)
 logger = logging.getLogger(__name__)
 
 def word_count(myfile):

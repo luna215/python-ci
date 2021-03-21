@@ -1,8 +1,10 @@
+
+import os
 import logging.config
 
 import main
 
-logging.config.fileConfig('/Users/paulluna/development/python-ci/logging.ini', disable_existing_loggers=False)
+logging.config.fileConfig(os.path.abspath('logging.ini'), disable_existing_loggers=False)
 logger = logging.getLogger(__name__)
 
 def record_word_count(myfile):
