@@ -17,6 +17,7 @@ timeago = "~=1.0.14"
 pandas = "*"
 gunicorn = "*"
 rq = "*"
+python-json-logger = "*"
 
 [dev-packages]
 vcrpy = "~=4.0"
