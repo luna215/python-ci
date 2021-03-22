@@ -8,16 +8,15 @@ logger = logging.getLogger(__name__)
 
 def record_word_count(myfile):
     for i in range(100000):
-        logger.error("starting the function")
+        starttime = time.time()
+        try:
+            raise ValueError('There was an issue')
+        except:
+            endtime = time.time()
+            duration = endtime - starttime
+            logger.error("uncaught exception: %s", traceback.format_exc(), extra={'run_duration': duration})
     
     raise ValueError
 
 if __name__ == '__main__':
-    try:
-        starttime = time.time()
-        record_word_count('doesnotexist.txt')
-    except:
-        endtime = time.time()
-        duration = endtime - starttime
-        logger.error("uncaught exception: %s", traceback.format_exc(), extra={'run_duration': duration})
-        print('there was an error')
+    record_word_count('doesnotexist.txt')
