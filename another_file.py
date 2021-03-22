@@ -26,4 +26,4 @@ def record_word_count(myfile):
 
 if __name__ == '__main__':
     record_word_count('doesnotexist.txt')
-    os.system('datadog-agent status')
+    os.system('agent-wrapper status')
