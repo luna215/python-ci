@@ -1,1 +1,1 @@
-test_batch_worker: python another_file.py
+test_batch_worker: python worker.py
