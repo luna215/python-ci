@@ -1,2 +1,3 @@
 echo "Setting DD_HEROKU_CONF_FOLDER...."
 echo $DD_HEROKU_CONF_FOLDER
+echo $DD_LOGS_ENABLED
