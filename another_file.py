@@ -20,3 +20,4 @@ if __name__ == '__main__':
         endtime = time.time()
         duration = endtime - starttime
         logger.error("uncaught exception: %s", traceback.format_exc(), extra={'run_duration': duration})
+        print('there was an error')
