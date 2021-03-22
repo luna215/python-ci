@@ -1,3 +1,4 @@
-echo "Setting DD_HEROKU_CONF_FOLDER...."
-echo $DD_HEROKU_CONF_FOLDER
+echo "ENABLING LOGS...."
+
+export $DD_LOGS_ENABLED=1
 echo $DD_LOGS_ENABLED
