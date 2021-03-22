@@ -1,25 +1,22 @@
-
 import os
-from os import path
-
 import logging.config
-
-import main
+import traceback
+import time
 
 logging.config.fileConfig(os.path.abspath('logging.ini'), disable_existing_loggers=False)
 logger = logging.getLogger(__name__)
 
 def record_word_count(myfile):
-    try:
-        word_count = main.word_count(myfile)
-        with open('wordcountarchive.csv', 'a') as file:
-            row = str(myfile) + ',' + str(word_count)
-            file.write(row + '\n')
-    except:
-        logger.warning("could not write file %s to destination", myfile)
-    finally:
-        logger.debug("the function is done for the file %s", myfile)
-
+    for i in range(1000):
+        logger.info("starting the function")
+    
+    raise ValueError
 
 if __name__ == '__main__':
-    record_word_count('doesnotexist.txt')
+    try:
+        starttime = time.time()
+        record_word_count('doesnotexist.txt')
+    except:
+        endtime = time.time()
+        duration = endtime - starttime
+        logger.error("uncaught exception: %s", traceback.format_exc(), extra={'run_duration': duration})
