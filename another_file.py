@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 
 def record_word_count(myfile):
     for i in range(100000):
-        logger.info("starting the function")
+        logger.error("starting the function")
     
     raise ValueError
 
