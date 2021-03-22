@@ -5,7 +5,7 @@ instances:
 ##Log section
 logs:
   - type: file
-    path: "/app/file.log"
+    path: "/app/logs/logs.log"
     service: "ci-python"
     source: python
     sourcecategory: sourcecode
