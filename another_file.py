@@ -7,7 +7,7 @@ logging.config.fileConfig(os.path.abspath('logging.ini'), disable_existing_logge
 logger = logging.getLogger(__name__)
 
 def record_word_count(myfile):
-    for i in range(1000):
+    for i in range(100000):
         logger.info("starting the function")
     
     raise ValueError
