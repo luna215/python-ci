@@ -1,4 +1,3 @@
 echo "ENABLING LOGS...."
 
-export DD_LOGS_ENABLED=1
-echo $DD_LOGS_ENABLED
+echo "logs_enabled: true" >> /app/.apt/etc/datadog-agent/datadog.yaml
