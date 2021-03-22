@@ -21,7 +21,7 @@ def record_word_count(myfile):
 
 
 if __name__ == '__main__':
-    record_word_count('myfile.txt')
+    record_word_count('doesnotexist.txt')
     
 
 
