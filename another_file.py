@@ -1,3 +1,4 @@
+from configparser import Error
 import os
 import logging.config
 import traceback
@@ -16,10 +17,10 @@ def record_word_count(myfile):
             duration = endtime - starttime
             logger.error("uncaught exception: %s", traceback.format_exc(), extra={'run_duration': duration})
     
-    raise ValueError
+    raise Error("Exiting app")
 
 if __name__ == '__main__':
     try:
         record_word_count('doesnotexist.txt')
     except:
-        logger.error("Deck didn't finish correctly")
+        logger.error("Deck didn't finish correctly %s", traceback.format_exc())
