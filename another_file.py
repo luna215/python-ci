@@ -19,4 +19,7 @@ def record_word_count(myfile):
     raise ValueError
 
 if __name__ == '__main__':
-    record_word_count('doesnotexist.txt')
+    try:
+        record_word_count('doesnotexist.txt')
+    except:
+        logger.error("Deck didn't finish correctly")
