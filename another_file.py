@@ -15,7 +15,7 @@ def record_word_count(myfile):
         except:
             endtime = time.time()
             duration = endtime - starttime
-            logger.error("uncaught exception: %s", traceback.format_exc(), extra={'run_duration': duration, "request_id": 123, "organization": "salesforce", 'targat_company': 456, 'user_id': 321, 'user_email': 'paul.luna+salesforce@trydatabook.com'})
+            logger.error("Deckbot crashed: %s", traceback.format_exc(), extra={'run_duration': duration, "request_id": 123, "organization": "salesforce", 'targat_company': 456, 'user_id': 321, 'user_email': 'paul.luna+salesforce@trydatabook.com'})
     
     raise Error("Exiting app")
 
