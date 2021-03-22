@@ -1,4 +1,4 @@
 echo "ENABLING LOGS...."
 
-export $DD_LOGS_ENABLED=1
+export DD_LOGS_ENABLED=1
 echo $DD_LOGS_ENABLED
