@@ -27,3 +27,5 @@ def word_count(myfile):
 
 if __name__ == '__main__':
     word_count('myfile.txt')
+
+    
