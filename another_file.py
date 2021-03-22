@@ -9,7 +9,7 @@ import main
 logging.config.fileConfig(os.path.abspath('logging.ini'), disable_existing_loggers=False)
 logger = logging.getLogger(__name__)
 
-print(path.exists('file.log'))
+os.system('pwd')
 
 def record_word_count(myfile):
     logger.info("starting the function")
