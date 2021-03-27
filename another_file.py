@@ -13,8 +13,8 @@ class DatabookFilter(logging.Filter):
     """
     This is a filter which injects contextual information into the log
     """
-    REQUEST_ID = os.environ['REQUEST_ID']
-    ENVIRONMENT = os.environ['ENVIRONMENT']
+    REQUEST_ID = 123
+    ENVIRONMENT = 'production'
     COMPANY = 'Databook'
     ORGANIZATION = 'Accenture'
 
@@ -39,11 +39,12 @@ logger.addFilter(databook_filter)
 
 
 def record_word_count(myfile):
-    for i in range(10):
+    for i in range(10000):
         starttime = time.time()
         try:
             raise ValueError('There was an issue')
         except:
+
             endtime = time.time()
             duration = endtime - starttime
             logger.error("Deckbot crashed: %s", traceback.format_exc(), extra={'run_duration': duration, "request_id": 123, 'user_email': 'paul.luna+salesforce@trydatabook.com'})
