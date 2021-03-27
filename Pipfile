@@ -30,4 +30,4 @@ pytest-mock = "~=3.2"
 requests-mock = "~=1.8"
 
 [requires]
-python_version = "3.8"
+python_version = "3.8.7"
