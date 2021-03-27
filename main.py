@@ -11,6 +11,7 @@ class CustomAdapter(logging.LoggerAdapter):
 
 logging.config.fileConfig(os.path.abspath('logging.ini'), disable_existing_loggers=False)
 logger = logging.getLogger(__name__)
+
 logger = CustomAdapter(logger, {'slide': None})
 
 def word_count(myfile):
