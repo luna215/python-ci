@@ -3,8 +3,15 @@ import logging.config
 import traceback
 import time
 
+
+class CustomAdapter(logging.LoggerAdapter):
+    def process(self, msg, kwargs):
+        my_context = kwargs.pop('slide', self.extra['slide'])
+        return '[%s] %s' % (my_context, msg), kwargs
+
 logging.config.fileConfig(os.path.abspath('logging.ini'), disable_existing_loggers=False)
 logger = logging.getLogger(__name__)
+logger = CustomAdapter(logger, {'slide': None})
 
 def word_count(myfile):
     try:
