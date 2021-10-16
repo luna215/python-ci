@@ -18,6 +18,7 @@ pandas = "*"
 gunicorn = "*"
 rq = "*"
 python-json-logger = "*"
+wily = "*"
 
 [dev-packages]
 vcrpy = "~=4.0"
@@ -30,4 +31,4 @@ pytest-mock = "~=3.2"
 requests-mock = "~=1.8"
 
 [requires]
-python_version = "3.8.7"
+python_version = "3.9.7"

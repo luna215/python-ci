@@ -1,0 +1,29 @@
+on: [push]
+
+name: Code Analyzer
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Cache dependencies & wily build
+        uses: actions/cache@v2
+        with:
+          path: ~/caches/wily
+          key: wily-analytics-build
+
+      - name: Install wily
+        run: pip install wily
+
+      - name: Run wily on code changes
+        run: wily build .
+
+      - name: Run wily on changed files
+        run: |
+          git log
+          for changed_file in {{ steps.files.outputs.all }}; do
+            wily diff ${changed_file}
+          done
