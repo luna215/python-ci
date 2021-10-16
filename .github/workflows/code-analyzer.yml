@@ -23,7 +23,6 @@ jobs:
 
       - name: Run wily on changed files
         run: |
-          git log
           for changed_file in {{ steps.files.outputs.all }}; do
             wily diff ${changed_file}
           done
