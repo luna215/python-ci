@@ -4,6 +4,12 @@ import traceback
 import time
 
 
+print('increasing complexity')
+print('increasing complexity')
+print('increasing complexity')
+print('increasing complexity')
+print('increasing complexity')
+print('increasing complexity')
 class CustomAdapter(logging.LoggerAdapter):
     def process(self, msg, kwargs):
         my_context = kwargs.pop('slide', self.extra['slide'])

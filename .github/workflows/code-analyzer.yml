@@ -12,18 +12,20 @@ jobs:
       - name: Cache dependencies & wily build
         uses: actions/cache@v2
         with:
-          path: ~/caches/wily
+          path: ./wily
           key: wily-analytics-build
 
       - name: Install wily
-        run: pip install wily
+        run: |
+          ls -a
+          pip install wily
 
       - name: Run wily on code changes
-        run: wily build .
+        run: wily -c ./wily build .
 
       - name: Run wily on changed files
         run: |
-          git log
-          for changed_file in {{ steps.files.outputs.all }}; do
-            wily diff ${changed_file}
-          done
+          wily  -c ./wily diff . -r 61ee4b43d40fb8c82c4148890941b33ccbbefac0
+          # for changed_file in {{ steps.files.outputs.all }}; do
+          #   wily -c ./wily diff ${changed_file}
+          # done
