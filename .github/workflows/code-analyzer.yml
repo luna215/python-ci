@@ -16,14 +16,16 @@ jobs:
           key: wily-analytics-build
 
       - name: Install wily
-        run: pip install wily
+        run: |
+          ls -a
+          pip install wily
 
       - name: Run wily on code changes
         run: wily -c ./wily build .
 
       - name: Run wily on changed files
         run: |
-          wily  -c ./wily diff . -r HEAD^1
-          # for changed_file in {{ steps.files.outputs.all }}; do
-          #   wily diff ${changed_file}
-          # done
+          # wily  -c ./wily diff . -r HEAD^100
+          for changed_file in {{ steps.files.outputs.all }}; do
+            wily -c ./wily diff ${changed_file} -r HEAD^10
+          done
