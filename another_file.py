@@ -7,6 +7,11 @@ import time
 
 print('Trying to increase the complexity of this file')
 print('Trying to increase the complexity of this file')
+print('Trying to increase the complexity of this file')
+print('Trying to increase the complexity of this file')
+print('Trying to increase the complexity of this file')
+print('Trying to increase the complexity of this file')
+print('Trying to increase the complexity of this file')
 # class CustomAdapter(logging.LoggerAdapter):
 #     def process(self, msg, kwargs):
 #         my_context = kwargs.pop('slide', self.extra['slide'])
