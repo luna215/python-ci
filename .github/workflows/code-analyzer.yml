@@ -25,7 +25,7 @@ jobs:
 
       - name: Run wily on changed files
         run: |
-          # wily  -c ./wily diff . -r HEAD^100
+          # wily  -c ./wily diff . -r HEAD^2
           for changed_file in {{ steps.files.outputs.all }}; do
-            wily -c ./wily diff ${changed_file} -r HEAD^10
+            wily -c ./wily diff ${changed_file} -r HEAD^2
           done
