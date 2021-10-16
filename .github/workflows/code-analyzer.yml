@@ -23,6 +23,7 @@ jobs:
 
       - name: Run wily on changed files
         run: |
-          for changed_file in {{ steps.files.outputs.all }}; do
-            wily diff ${changed_file}
-          done
+          wily diff . -r HEAD^1
+          # for changed_file in {{ steps.files.outputs.all }}; do
+          #   wily diff ${changed_file}
+          # done
