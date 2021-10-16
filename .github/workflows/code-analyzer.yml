@@ -12,14 +12,14 @@ jobs:
       - name: Cache dependencies & wily build
         uses: actions/cache@v2
         with:
-          path: ~/caches/wily
+          path: ./wily
           key: wily-analytics-build
 
       - name: Install wily
         run: pip install wily
 
       - name: Run wily on code changes
-        run: wily build .
+        run: wily -c ./wily build .
 
       - name: Run wily on changed files
         run: |
